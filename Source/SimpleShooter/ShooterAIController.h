@@ -21,10 +21,11 @@ protected:
 
 private:
 	FVector LastLocation;
+	FVector StartLocation;
 	APawn* PlayerPawn;
 
 	UPROPERTY(EditAnywhere)
 	class UBehaviorTree* AIBehavior;
-	
+
 	//float AcceptanceRadius = 200;
 };
