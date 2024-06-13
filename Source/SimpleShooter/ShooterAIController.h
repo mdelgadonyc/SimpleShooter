@@ -22,6 +22,7 @@ protected:
 private:
 	FVector LastLocation;
 	FVector StartLocation;
+	FVector PlayerLocation;
 	APawn* PlayerPawn;
 
 	UPROPERTY(EditAnywhere)
