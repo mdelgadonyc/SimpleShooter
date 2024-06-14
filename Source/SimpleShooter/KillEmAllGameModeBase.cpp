@@ -7,6 +7,10 @@ void AKillEmAllGameModeBase::PawnKilled(APawn* PawnKilled)
 {
     Super::PawnKilled(PawnKilled);
 
-    UE_LOG(LogTemp, Warning, TEXT("A pawm was killed!"));
+    APlayerController* PlayerController = Cast<APlayerController>(PawnKilled->GetController() );
+    if (PlayerController != nullptr)
+    {
+        PlayerController->GameHasEnded(nullptr, false);
+    }
 
 }
